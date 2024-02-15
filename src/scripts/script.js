@@ -32,23 +32,22 @@ offcanvas.appendChild(offcanvasBody);
 
 document.body.appendChild(offcanvas);
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const searchIcon= document.getElementById('search');
-//     const searchBar = document.getElementById('searchPanel');
+document.addEventListener('DOMContentLoaded', () => {
+    const searchIcon= document.getElementById('search');
+    const searchBar = document.getElementById('searchPanel');
     
-//     //Toggle search bar visibility
-//     searchIcon.addEventListener('click', () => {
-//         if(window.innerWidth < 992) {
-//             searchBar.style.display = (searchBar.style.display === 'block') ? 'none' : 'block'
-//        }
-//    });
-//    //Hide search bar clicking outside appeared search bar
-//     document.addEventListener('click', (e) => {
-//         const clickInside = searchIcon.contains(e.target) || searchBar.contains(e.target);
-//         if(!clickInside) {
-//             searchBar.style.display = 'none';
-//         }
-//     });
-// })
+    //Toggle search bar visibility
+    searchIcon.addEventListener('click', () => {
+        if(window.innerWidth < 992) {
+            searchBar.style.display = (searchBar.style.display === 'block') ? 'none' : 'block'
+       }
+   });
+   //Hide search bar clicking outside appeared search bar
+    document.addEventListener('click', (e) => {
+        const clickInside = searchIcon.contains(e.target) || searchBar.contains(e.target);
+        if(!clickInside) {
+            searchBar.style.display = 'none';
+        }
+    });
+})
 
-//dropdown menu for user account click

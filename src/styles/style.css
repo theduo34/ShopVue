@@ -6,10 +6,10 @@
 body{
     font-family: sans-serif;
 }
+/**********************Nav Bar**********************************/
 .navbar{
-    display: flex;
+   
 }
-
 #account{
     border: 1px solid rgba(0, 0, 0, 0.127);
     padding: 2px;
@@ -42,6 +42,58 @@ body{
 .dropdown-menu { 
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important; 
 } 
+/*********End of Nav Bar***************/
+/*************************Main Content************************************/
+.main-content{
+  margin: 0px;
+  padding: 7px;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;    
+    
+}
+/*
+The following style is used to make the left panel of the main content
+*/
+.content-left{
+    flex-basis: 20%;
+    background-color: blue;
+    display: flex;
+    align-items: center;flex-basis: 20%;
+    background-color: #efefef;
+    padding: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    left:0px;
+    border-radius: 10px;
+}
+
+
+/*
+The following style is used to make the center panel of the main content
+*/
+.content-center{
+  flex-basis: 60%;
+  margin:0px 7px;
+  padding:10px;
+  position: sticky;
+  background-color: #efefef;
+  border-radius: 10px;
+  display: flex;
+    
+}
+
+/*
+The following style is used to make the right panel of the main content
+*/
+.content-right{ 
+  flex-basis: 20%;
+  background-color: #efefef;
+  padding: 10px;
+  position: sticky;
+  border-radius: 7px;
+  display: flex;
+}
 
 
 @media (max-width: 768px){
@@ -56,7 +108,7 @@ body{
         width: 90px;
       }
       #searchPanel {
-        display: block;
+        display: none;
       }
       .dropdown ul li a button i{
         font-size: 12px;
