@@ -15,24 +15,17 @@
 </head>
 <body>
 <!-----------------------Nav Bar---------------------------------->
-   <nav class="navbar navbar-expand-lg bg-info  navbar-info" role="navigation">
+   <nav class="navbar navbar-expand-lg bg-info  fixed-top navbar-info" role="navigation">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#list-items"   aria-label="toggle navigation" aria-controls="navbarOffcanvasLg">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"   aria-label="toggle navigation" aria-controls="navbarOffcanvasLg">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a href="#" class="navbar-brand">
             <img src="/ShopVue/src/images/L & B logo.jpeg" alt="design logo" style="width:50px" class="rounded-pill ms-3">
         </a>
 
-        <div class = "offcanvas.show offcanvas-start bg-secondary text-white" id="list-items"
-        aria-labelledby="offcanvasExampleLabel" data-bs-theme="dark">
-        <div class="offcanvas-header justify-content-between d-flex align-items
-        justify-content-end mx-auto">
-        <h3 offcanvas-header>Aquas's ShopVue</h3>
-        <button type='button' class="btn btn-close" data-bs-dismiss="offcanvas"></button>
-       </div>
-        </div>
-
+        <div class="offcanvas offcanvas-start" id="offcanvas"></div>
+        
         <!---Button trigger modal,show/hide based on device-width state--->
         <button type="button" class="btn" id="search"><i class="fa-solid fa-magnifying-glass me-3"  style="cursor:pointer"></i></button>
 
@@ -82,7 +75,7 @@
   
 <!------------------------------Main Content--------------------------------------->
 <!-- Button trigger search panel--------->
-<div class="container ">
+<div class="container pt-6 ">
     <form action="GET" id="searchPanel">
         <div class="input-group  rounded-4" style="width:100%;" id="input">
            <div class="input-group-prepend">
@@ -99,7 +92,9 @@
         <div class="main-content">  
             <!-----------left panel content------------------------------>
             <div class="content-left">
-                <p>Hello there!How are you doing today Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officiis non reiciendis, alias aperiam perferendis accusamus libero expedita blanditiis repudiandae placeat sunt delectus eius suscipit illo molestiae eveniet. Quibusdam, consequuntur! lorem lorem </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et temporibus consequuntur impedit sint asperiores quas aliquam sunt, minima nemo dolore odit. Consectetur enim tempora deserunt quis deleniti, totam quasi repudiandae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium doloribus veniam earum eius. Vel quasi voluptatum at quidem adipisci consequatur mollitia temporibus, eligendi alias dicta ut soluta itaque dolor nulla! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia cum fugiat voluptatibus sequi, maxime aliquid, nobis tempora, dicta facere optio earum laborum. Commodi minima error dolorum inventore pariatur quisquam fugit.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis fugiat illo architecto numquam, provident iusto, laborum eligendi suscipit ducimus quisquam? Deserunt esse dolore praesentium quo nobis rem tempora et?
+                </p>
             </div>
             
             <!--------------center panel content-------------------------->
@@ -117,6 +112,7 @@
 
         </div>
     </div>
+    
     
 
 

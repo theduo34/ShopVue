@@ -1,4 +1,4 @@
-const offcanvas = document.getElementById('list-items');
+const offcanvas = document.getElementById('offcanvas');
 
 const offcanvasHeader = document.createElement('div');
 offcanvasHeader.classList.add('offcanvas-header');
@@ -7,11 +7,11 @@ const offcanvasTitle = document.createElement('h6');
 offcanvasTitle.classList.add('offcanvas-title');
 
 const userIcon = document.createElement('i');
-userIcon.classList.add('fa-regular', 'fa-user', 'text-lowercase')
+userIcon.classList.add('fa-regular', 'fa-user', 'text-lowercase', 'fw-bold', 'fs-24');
 userIcon.textContent = ' AQUASI.NINETY-NINE';
 
 const button = document.createElement('button');
-button.classList.add('btn', 'btn-close', 'btn-close-white');
+button.classList.add('btn', 'btn-close');
 button.setAttribute('type', 'button');
 button.setAttribute('data-bs-dismiss', 'offcanvas');
 
@@ -22,8 +22,8 @@ offcanvasHeader.appendChild(button);
 const offcanvasBody = document.createElement('div');
 offcanvasBody.classList.add('offcanvas-body');
 
-const navbarNav = document.createElement('p');
-navbarNav.textContent = 'Settings';
+const navbarNav = document.createElement('i');
+navbarNav.textContent = 'carousel-caret-next';
 
 offcanvasBody.appendChild(navbarNav);
 
@@ -50,4 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })
+
+/*
+left page of the main content, and where contains group list of categories of product. Based the selected category will determined the display product on the middle right page 
+*/
+
+
+
 

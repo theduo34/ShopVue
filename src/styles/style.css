@@ -5,11 +5,10 @@
 }
 body{
     font-family: sans-serif;
+    padding-top:70px;
 }
 /**********************Nav Bar**********************************/
-.navbar{
-   
-}
+
 #account{
     border: 1px solid rgba(0, 0, 0, 0.127);
     padding: 2px;
@@ -42,6 +41,9 @@ body{
 .dropdown-menu { 
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important; 
 } 
+.offcanvas{
+  display:none;
+}
 /*********End of Nav Bar***************/
 /*************************Main Content************************************/
 .main-content{
@@ -49,9 +51,11 @@ body{
   padding: 7px;
   display: flex;
   box-sizing: border-box;
-  position: relative;    
+  position: relative; 
+  flex: 1;   
     
 }
+
 /*
 The following style is used to make the left panel of the main content
 */
@@ -64,8 +68,10 @@ The following style is used to make the left panel of the main content
     padding: 10px;
     position: -webkit-sticky;
     position: sticky;
-    left:0px;
+    top:0px;
     border-radius: 10px;
+    flex-shrink: 0;
+    overflow-y: auto;
 }
 
 
@@ -73,9 +79,10 @@ The following style is used to make the left panel of the main content
 The following style is used to make the center panel of the main content
 */
 .content-center{
-  flex-basis: 60%;
+  flex-basis: 80%;
   margin:0px 7px;
   padding:10px;
+  position: -webkit-sticky;
   position: sticky;
   background-color: #efefef;
   border-radius: 10px;
@@ -87,13 +94,16 @@ The following style is used to make the center panel of the main content
 The following style is used to make the right panel of the main content
 */
 .content-right{ 
-  flex-basis: 20%;
+  flex-basis: 0%;
   background-color: #efefef;
   padding: 10px;
   position: sticky;
+  position: -webkit-sticky;
   border-radius: 7px;
   display: flex;
+  
 }
+
 
 
 @media (max-width: 768px){
@@ -121,6 +131,9 @@ The following style is used to make the right panel of the main content
       }
       .dropdown-menu{
         display:none
+      }
+      .offcanvas{
+        display: block;
       }
         
 }
