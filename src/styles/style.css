@@ -28,7 +28,7 @@ body{
     border: 1px solid black;
 }
 #searchPanel{
-    margin:40px 0px;
+    margin:0px 0px;
     display: none;
 }
 .dropdown ul li a {
@@ -50,10 +50,7 @@ body{
   margin: 0px;
   padding: 7px;
   display: flex;
-  box-sizing: border-box;
   position: relative; 
-  flex: 1;   
-    
 }
 
 /*
@@ -61,17 +58,32 @@ The following style is used to make the left panel of the main content
 */
 .content-left{
     flex-basis: 20%;
-    background-color: blue;
     display: flex;
-    align-items: center;flex-basis: 20%;
-    background-color: #efefef;
     padding: 10px;
-    position: -webkit-sticky;
-    position: sticky;
-    top:0px;
     border-radius: 10px;
-    flex-shrink: 0;
-    overflow-y: auto;
+    height: 100vh;
+    overflow-y: scroll;
+   
+}
+.list-group {
+  display: flex;
+  width: 100%;
+}
+.list-group {
+  display:flex;
+}
+.list-group-item {
+  list-style: none;
+}
+.list-group-item  a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0px 0px;
+  
+}
+.end-icon {
+  margin-left: 100%;
 }
 
 
@@ -80,29 +92,20 @@ The following style is used to make the center panel of the main content
 */
 .content-center{
   flex-basis: 80%;
-  margin:0px 7px;
   padding:10px;
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: #efefef;
   border-radius: 10px;
   display: flex;
+  height: 100vh;
+  overflow-y:scroll;
+  margin: 10px;
+  margin-right: 0px;
     
 }
 
 /*
 The following style is used to make the right panel of the main content
 */
-.content-right{ 
-  flex-basis: 0%;
-  background-color: #efefef;
-  padding: 10px;
-  position: sticky;
-  position: -webkit-sticky;
-  border-radius: 7px;
-  display: flex;
-  
-}
+
 
 
 
@@ -126,7 +129,7 @@ The following style is used to make the right panel of the main content
 }
 
 @media (max-width:992px) {
-    .navbar-brand{
+     .navbar-brand{
         display: none;
       }
       .dropdown-menu{
@@ -135,5 +138,12 @@ The following style is used to make the right panel of the main content
       .offcanvas{
         display: block;
       }
+      .content-left{
+        display: none;
+      }
+      .content-center {
+        flex-basis: 100%;
+      }
+      
         
 }
