@@ -57,7 +57,7 @@ body{
 The following style is used to make the left panel of the main content
 */
 .content-left{
-    flex-basis: 20%;
+    flex-basis: 22%;
     display: flex;
     padding: 10px;
     border-radius: 10px;
@@ -68,22 +68,21 @@ The following style is used to make the left panel of the main content
 .list-group {
   display: flex;
   width: 100%;
+  cursor: pointer;
 }
-.list-group {
-  display:flex;
-}
+
 .list-group-item {
   list-style: none;
 }
 .list-group-item  a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
+  font-weight: small;
   padding: 0px 0px;
   
 }
 .end-icon {
-  margin-left: 100%;
+  float:right;
 }
 
 
@@ -140,9 +139,14 @@ The following style is used to make the right panel of the main content
       }
       .content-left{
         display: none;
+       
       }
       .content-center {
         flex-basis: 100%;
+        overflow-y: auto;
+      }
+      .offcanvas-body{
+        overflow-y:scroll;
       }
       
         
